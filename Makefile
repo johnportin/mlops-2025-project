@@ -1,4 +1,4 @@
-.PHONY: format lint isort test install clean precommit-install airflow-start airflow-stop airflow-restart airflow-status mlflow-start mlflow-stop mlflow-restart mlflow-status
+.PHONY: format lint isort test install clean precommit-install airflow-start airflow-stop airflow-restart airflow-status mlflow-start mlflow-stop mlflow-restart mlflow-status setup
 
 mlflow-start:
 	bash scripts/mlflow_control.sh start
@@ -40,6 +40,9 @@ test:
 
 install:
 	pip install -r requirements.txt
+
+setup:
+	bash scripts/setup_env.sh
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +

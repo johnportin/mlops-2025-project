@@ -3,11 +3,13 @@
 ## Environment Setup
 
 1. Ensure you have Python 3.12 installed on your system.
-2. Run the following script to set up the virtual environment and install dependencies with [uv](https://github.com/astral-sh/uv):
+2. Set up the virtual environment and install all dependencies using the Makefile command:
 
 ```bash
-bash scripts/setup_env.sh
+make setup
 ```
+
+This command will run the setup script (`scripts/setup_env.sh`) to create a virtual environment and install dependencies using [uv](https://github.com/astral-sh/uv).
 
 3. Activate the environment:
 
@@ -26,8 +28,6 @@ make airflow-start     # Start webserver and scheduler
 make airflow-stop      # Stop both
 make airflow-restart   # Restart both
 make airflow-status    # Show running status
-
-All scripts are now in the `scripts/` directory for better organization.
 ```
 
 The Airflow UI will be available at [http://localhost:8080](http://localhost:8080) after running `make airflow-start`.
