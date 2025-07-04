@@ -1,3 +1,0 @@
-[flake8]
-exclude = .venv,env,venv,ENV,.git,__pycache__,*.egg-info,airflow/webserver_config.py
-max-line-length = 100
