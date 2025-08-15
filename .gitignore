@@ -1,0 +1,6 @@
+# Python environment
+.venv/*
+.python-version
+
+# airflow
+airflow/*
